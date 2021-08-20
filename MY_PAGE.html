@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 
+            ◢＼　 ☆　　 ／◣
+    　  　∕　　﹨　╰╮∕　　﹨
+    　  　▏　　～～′′～～ 　｜
+    　　  ﹨／　　　　　　 　＼∕
+    　 　 ∕ 　　●　　　 ●　＼
+      ＝＝　○　∴·╰╯　∴　○　＝＝
+    　    ╭──╮　　　　　╭──╮
+  ╔═ ∪∪∪═Mashiro&Hitomi═∪∪∪═╗
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>月色真美,风也温柔</title>
+    <meta name="description" content="这里是恋的个人主页，目前站长仍在学习中，每天抽出时间来看书学习，励志成为一个技术很牛的程序员。">
+    <meta name="keywords" content="风也温柔,个人主页,程序员">
+    <!-- 网站的图标 -->
+    <link rel="icon" type="image/ico" href="https://cdn.jsdelivr.net/gh/neko-whx/blog-img/favicon.ico">
+    <!-- 加载的css样式文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/all.min.css">
+    <link rel="stylesheet" href="CSS文件/mystyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/APlayer.min.css">
+
+    <!-- live-2d看板娘 -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS文件/live_2d_style.css">
+    <script src="js文件/autoload.js"></script> -->
+    <!--  -->
+</head>
+
+<body>
+    <!-- 网站主体框架 -->
+    <div id="main" class="container">
+        <div class="row my-card justify-content-center">
+            <div class="col-lg-4 photo-bg"></div>
+            <div class="col-lg-8 card">
+                <h1>Hi，我是恋，这里是我的主页！</h1>
+                <p>很荣幸您能访问我的网站！ 目前我仍在学习中，每天抽出时间来看书学习，励志成为一个技术很牛的程序员。
+                </p>
+                <p>
+                    我很喜欢的一句话：<br>If the moon smiled, she would resemble you.<br> 如果月亮会笑，那么她一定像你一样美！
+
+                </p>
+
+                <p>Catch me:</p>
+                <div class="row">
+
+                    <a href="http://121.196.215.38/wordpress" target="_blank" class="btn btn-primary col-lg-4">BLOG</a>
+
+                    <a href="https://github.com/neko-whx" target="_blank" class="btn btn-secondary col-lg-4">GitHub</a>
+
+                    <a href="//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wrsrssqder@foxmail.com" target="_blank"
+                        id="kaygb-mail-a" class="btn btn-success col-lg-4">Send a Mail</a>
+
+                    <button id="kaygb-mail" class="btn btn-success col-lg-4">Send a Mail</button>
+                </div>
+
+
+                <h4 class="mt-4">or, keep your eyes on</h4>
+                <!-- <ul class="social mt-1">
+                    <li><a href="https://weibo.com/u/5883027184/home" target="_blank"><i class="fab fa-weibo "
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/neko-whx" target="_blank"><i class="fab fa-github"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.zhihu.com/people/lian-11-77" target="_blank"><i class="fab fa-zhihu"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul> -->
+                <footer>
+                    <p>这里是我的个人空间 <a href="https://user.qzone.qq.com/799220925/main" target="_blank">恋</a>
+                        <br>Mod by
+                        <a href="http://121.196.215.38/wordpress" target="_blank" rel="">恋</a>
+                    </p>
+                    <span>小破站已运行：</span><span id="date"></span>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+    <!-- 网易在线歌单 -->
+    <div id="aplayer" class="aplayer" data-order="random" data-id="20173709" data-server="netease" data-type="playlist"
+        data-fixed="true" data-autoplay="true" data-volume="0.8"></div>
+    <!-- aplayer -->
+    <!--时间-->
+    <script>
+        setInterval(datetime, 1000);
+        function datetime() {
+            var date = new Date();
+            var currentTime = date.getTime();
+            var pastTime = "1628762596000";
+            var time = currentTime - pastTime;
+            var totalTime = new Date(time);
+
+            var date = document.getElementById("date");
+            date.innerText = (totalTime.getDate() - 1) + "天" + (totalTime.getHours() - 8) + "时"
+                + totalTime.getMinutes() + "分" + totalTime.getSeconds() + "秒"
+        }
+    </script>
+    <!-- 看板娘 -->
+    <script type="text/javascript" charset="utf-8"
+        src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/L2Dwidget.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8"
+        src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/L2Dwidget.min.js"></script>
+    <script type="text/javascript">
+        L2Dwidget.init({
+            "display": {
+                "superSample": 2,
+                "width": 200,
+                "height": 400,
+                "position": "right",
+                "hOffset": 0,
+                "vOffset": 0
+            }
+        });
+    </script>
+
+    <!-- 飘落动效 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/sakura-half.js">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/Meting.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/popper.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/layer.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/neko-whx/styles_files/v3.js"></script>
+    <script>
+        //弹出一个页面层
+        $('#kaygb-blog').on('click', function () {
+            layer.open({
+                type: 2,
+                title: 'neko_whx',
+                shadeClose: true,
+                shade: false,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['80%', '100%'],
+                content: '//neko_whx_blog.nov.ink/'
+            });
+        });
+        $('#kaygb-mail').on('click', function () {
+            layer.open({
+                type: 2,
+                title: 'Mail',
+                shadeClose: true,
+                shade: false,
+                maxmin: true, //开启最大化最小化按钮
+                area: ['80%', '100%'],
+                content: '//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wrsrssqder@foxmail.com'
+            });
+        });
+    </script>
+
+</html>
